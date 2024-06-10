@@ -143,40 +143,6 @@ This guide is based on my personal experience. No BS, let's go.
         git config --global user.email "your.email@example.com"
         ```
     - **Set Up SSH for Git**:
-        - **Generate a New SSH Key**:
-            ```sh
-            ssh-keygen -t ed25519 -C "your.email@example.com"
-            ```
-            - When prompted, specify the file to save the key (press Enter to accept the default location) and enter a passphrase for added security.
-        - **Add Your SSH Key to the SSH-Agent**:
-            - Start the SSH agent in the background:
-            ```sh
-            eval "$(ssh-agent -s)"
-            ```
-            - Add your SSH private key to the SSH agent:
-            ```sh
-            ssh-add ~/.ssh/id_ed25519
-            ```
-        - **Add the SSH Key to Your GitHub Account**:
-            - Copy your SSH key to the clipboard:
-            ```sh
-            pbcopy < ~/.ssh/id_ed25519.pub
-            ```
-            - Go to GitHub and navigate to **Settings > SSH and GPG keys > New SSH key**.
-            - Paste your key into the "Key" field and give it a descriptive title.
-        - **Test Your SSH Connection**:
-            - Verify that your SSH key was added correctly by running:
-            ```sh
-            ssh -T git@github.com
-            ```
-            - You should see a message similar to:
-            ```
-            Hi username! You've successfully authenticated, but GitHub does not provide shell access.
-            ```
-        - **Configure Git to Use SSH URLs**:
-            - When cloning repositories, use the SSH URL:
-            ```sh
-            git clone git@github.com:username/repository.git
-            ```
+        - Using SSH keys is a secure way to authenticate with Git repositories. Follow the steps outlined in the [GitHub documentation](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account).
 
 This setup should help streamline your Mac development environment, enhancing both security and productivity. If you have any other tools or configurations that you find indispensable, feel free to add them.
