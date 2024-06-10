@@ -112,6 +112,7 @@ This guide is based on my personal experience. No BS, let's go.
 - Download BetterTouchTool [here](https://folivora.ai/).
 
 ## My Workflow
+![image](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*DVCxNoIlgpifE9iarutqcg.png)
 - My Mac workflow for development consists of using workspaces dedicated to specific tasks and quickly switching contexts between them.
     - **Workspace Layout**:
         - All code-related workspaces are to the left.
